@@ -1,4 +1,4 @@
-const layout = require('../layout');
+const layout = require("../layout");
 
 module.exports = ({ items }) => {
   // let totalPrice = 0;
@@ -11,7 +11,7 @@ module.exports = ({ items }) => {
   }, 0);
 
   const renderedItems = items
-    .map(item => {
+    .map((item) => {
       return `
         <div class="cart-item message">
           <h3 class="subtitle">${item.product.title}</h3>
@@ -36,7 +36,7 @@ module.exports = ({ items }) => {
         </div>
       `;
     })
-    .join('');
+    .join("");
 
   return layout({
     content: `
@@ -59,6 +59,6 @@ module.exports = ({ items }) => {
           <div class="column"></div>
         </div>
       </div>
-    `
+    `,
   });
 };
